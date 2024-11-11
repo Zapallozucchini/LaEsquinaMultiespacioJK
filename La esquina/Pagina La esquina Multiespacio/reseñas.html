@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Esquina-Reseña</title>
+    <link rel="stylesheet" href="vistas2.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="Imagenes/logo.png" alt="Logo" class="logo">
+        </div>
+        <ul class="navbar">
+            <li class="menu-item"><a href="index.html">Inicio</a></li>
+            <li class="menu-item"><a href="servicios.html">Servicios</a></li>
+            <li class="menu-item"><a href="contacto.html">Contacto</a></li>
+            <li class="menu-item"><a href="reseñas.html">Reseñas</a></li>
+        </ul>
+    </header>
+
+    
+<form id="Reseñasform" novalidate>
+    <h2 class="titulo">Cómo fue tu experiencia? Deja tu reseña</h2>
+        <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email">
+            <div class="error-message" id="errorEmail"></div>
+
+        <label for="nombre">Nombre y Apellido:</label>
+            <input type="text" id="nombre" name="nombre" maxlength="50" required>
+            <div class="error-message" id="errorNombre"></div>
+
+        <label for="opinion" class="opinion">Deja tu opinión:</label>
+            <textarea id="opinion" name="opinion" maxlength="300" required></textarea>
+
+        <label for="experiencia">Cómo calificas tu experiencia?:</label>
+            <select id="experiencia" name="experiencia" required>
+                <option value="">--Seleccionar--</option>
+                <option value="Muy Bueno">La mejor experiencia de mi vida</option>
+                <option value="Bueno">No está nada mal pero zafa</option>
+                <option value="Medio">Ni bien ni mal</option>
+                <option value="Malo">Más esfuerzo para la próxima</option>
+                <option value="Muy Malo">He visto mierda mas buena que esa</option>
+            </select>
+            <div class="error-message" id="errorExperiencia"></div>
+            <button type="submit" id="submitBtn">Enviar</button>
+        </form>
+
+        <section id="feedback">
+            <h3>Últimos datos registrados:</h3>
+            <p id="feedbackDatos"></p>
+        </section>
+   
+
+    <footer class="pieDePagina">
+        <div class="pieDePagina-contenido">
+            <p>&copy; LaEsquinaMultiespacio. Todos los derechos reservados.</p>
+            <p><a href="https://linktr.ee/LaEsquinaMULTIESPACIO">Redes</a> | <a href="contacto.html">Contacto</a></p>
+        </div>
+    </footer>
+
+    <script src="scriptreseña.js"></script>
+</body>
+
+
+</html>

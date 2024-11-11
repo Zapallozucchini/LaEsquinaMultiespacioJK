@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+  }
+li {
+    list-style: none;
+  }
+  
+  :root {
+    --main-color: #00f521;
+    --black: #13131a;
+    --bg: #191919;
+    --white: #fff;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--bg);
+    overflow-x: hidden;
+  }
+  section {
+    padding: 2rem 7%;
+  }
+  
+  /*Encabezado*/
+  header {
+    /* background: transparent;*/
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 0 0 20px rgba(255, 236, 236, 0.5);
+  }
+  .header .logo {
+    width: 60px;
+    height: 60px;
+  }
+  .header .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  .header .navbar .menu-item a {
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+    color: var(--white);
+    text-transform: uppercase;
+    position: relative;
+    padding: 1.1rem 0;
+  }
+  .header .navbar .menu-item a:hover {
+    color: var(--main-color);
+  }
+  /*Fin Encabezado*/
+
+/*Inicio*/
+
+  .inicio {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Imagenes/PADEL/ImagenfondoPrueba-dnmoXVpt3-transformed.jpeg");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+  
+  .inicio .contenido{
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 13px;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    
+  }
+  .inicio .contenido h3{
+    font-size: 2.9rem;
+    text-transform: uppercase;
+    line-height: 4rem;
+    color: var(--black);
+    text-shadow: 2px 2px 0 #ffffff, -1px -1px 0 #ffffff, 2px -1px 0 #ffffff, -1px 2px 0 #ffffff; /* Borde blanco */
+  }
+  .inicio .contenido p{
+    color: var(--black);
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.9;
+    padding: 1rem 0;
+    text-shadow: 2px 2px 0 #ffffff, -1px -1px 0 #ffffff, 2px -1px 0 #ffffff, -1px 2px 0 #ffffff; /* Borde blanco */
+  }
+
+/*Fin Inicio*/
+
+/*Sobre Nosotros */
+  .sobrenosotros{
+    overflow: hidden;
+    margin: 8rem 0;
+  }
+  .sobrenosotros .fila{
+    margin-top: 4rem;
+    align-items: start;
+    gap: 35px;
+    display: flex;
+  }
+  .sobrenosotros .AutoCarrusel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    aspect-ratio: 1 / 1; /* Mantiene una proporción de 1:1 para que sean cuadradas */
+    overflow: hidden;
+  }
+  .sobrenosotros .AutoCarrusel img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Añadimos la transición */
+}
+.sobrenosotros .AutoCarrusel img.active {
+  opacity: 1; /* Solo la imagen activa será visible */
+}
+.sobrenosotros .AutoCarrusel img:first-child {
+    display: block;
+}
+  .sobrenosotros .fila .contenido {
+    align-items: center;
+    padding: 0.3rem 0;
+  }
+  .sobrenosotros .fila .contenido h3 {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 3rem;
+    color: var(--white);
+    text-shadow: 2px 2px 0 #000000, -1px -1px 0 #000000, 2px -1px 0 #000000, -1px 2px 0 #000000;
+  }
+  .sobrenosotros .fila .contenido p {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    line-height: 1.3;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000;
+  }
+  
+  .btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.7rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--white);
+    background: var(--bg);
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+  }
+  .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: var(--main-color);
+    z-index: -1;
+    transition: 0.5s;
+    border-radius: 5px;
+  }
+  .btn:hover::before {
+    width: 100%;
+  }
+  .btn:hover {
+    color: var(--bg);
+    border: none;
+    
+  }
+  .sobrenosotros-btn {
+    border: 2px solid #fdfdfd;
+    top: 60%;
+    left: 35%;
+  }
+  .sobrenosotros .encabezado {
+    text-align: center;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 2.8rem;
+  }
+/*Fin Sobre Nosotros */
+/*SERVICIOS*/
+
+.contCarrusel {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 200px;
+}
+
+.carrusel {
+  position: relative;
+  width: 400px;
+  height: 400px; /* Cambiado para hacerlo cuadrado */
+  overflow: hidden;
+  margin-bottom: 200px; /* Ajusta este valor según el espacio que desees */
+}
+
+.carrusel-imagenes {
+  display: flex; /* Para que las imágenes estén en fila */
+  transition: transform 0.5s ease; /* Transición suave al cambiar de imagen */
+  
+}
+
+.carrusel-imagenes img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 3; /* Asegura que los botones estén por encima del fondo */
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.over-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 15%;
+  left: -100%; /* El texto está oculto inicialmente */
+  transition: 0.6s;
+  z-index: 4; /* Asegura que el texto esté por encima del fondo */
+  opacity: 0%;
+}
+
+.service-one:hover .over-txt {
+  left: 5%; /* El texto se desplaza dentro de la imagen cuando pasa el cursor */
+  opacity: 100%;
+}
+
+.service-one:hover .carrusel-imagenes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Filtro oscuro */
+  
+  z-index: 2; /* Fondo oscuro detrás del texto */
+  pointer-events: none; /* Para que el fondo no interfiera con el contenido */
+}
+
+
+
+.service-one:hover .carrusel-imagenes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Filtro oscuro */
+  z-index: 2; /* Fondo oscuro detrás del texto y los botones */
+  pointer-events: none; /* Para que el fondo no interfiera con el contenido */
+}
+
+.over-txt span {
+  color: var(--main-color);
+  font-size: 1.5rem;
+}
+
+.over-txt h4 {
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.over-txt a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  align-self: flex-start;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Cambia el color del botón al pasar el cursor */
+}
+/* DESCRIPCIÓN DE SERVICIOS */
+.Descripcion {
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.Descripcion .titulo1 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--white);
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 0 #000000, -1px -1px 0 #000000, 2px -1px 0 #000000, -1px 2px 0 #000000;
+}
+
+.servicio-card {
+  background-color: #2e2e2e;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(255, 236, 236, 0.5);
+}
+
+.servicio-card h1 {
+  font-size: 1.8rem;
+  color: var(--main-color);
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 0 #000000;
+}
+
+.servicio-card p {
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 0 #000000;
+}
+
+/*PIE DE PAGINA*/
+
+.pieDePagina {
+  background-color: #333; /* Color de fondo oscuro */
+  color: #fff;            /* Texto en blanco */
+  padding: 45px;          /* Espaciado interno */
+  text-align: center;     /* Centrar texto */
+  width: 100%;            /* Ocupar todo el ancho */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+  position: relative;     /* Posición relativa para estar al final del contenido */
+}
+
+.pieDePagina-contenido a {
+  color: #00aced;         /* Color de los enlaces */
+  text-decoration: none;  /* Sin subrayado */
+  margin: 0 10px;         /* Espacio entre los enlaces */
+}
+
+.pieDePagina-contenido a:hover {
+  text-decoration: underline; /* Subrayar al pasar el ratón */
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Esquina-Servicios</title>
+    <link rel="stylesheet" href="vistas.css">
+    
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="Imagenes/logo.png" alt="Logo" class="logo">
+        </div>
+
+        <ul class="navbar">
+            <li class="menu-item"><a href="index.html">Inicio</a></li>
+            <li class="menu-item"><a href="servicios.html">Servicios</a></li>
+            <li class="menu-item"><a href="contacto.html">Contacto</a></li>
+            <li class="menu-item"><a href="reseñas.html">Reseñas</a></li>
+        </ul>
+</header>
+<div class="contCarrusel">
+    <!-- Carrusel 1 -->
+    <div class="carrusel service-one">
+        <button class="prev" onclick="previousImage(0)">&#10094;</button>
+        <div class="carrusel-imagenes">
+            <img id="carousel0Image" alt="Servicio 1">
+        </div>
+        <button class="next" onclick="nextImage(0)">&#10095;</button>
+        <div class="over-txt">
+            <span>Actividades para eventos</span>
+            <h4>EVENTOS, REUNIONES, CENAS DE FIN DE AÑO</h4>
+            <a href="#eventos">Leer más</a>
+        </div>
+    </div>
+
+    <!-- Carrusel 2 -->
+    <div class="carrusel service-one">
+        <button class="prev" onclick="previousImage(1)">&#10094;</button>
+        <div class="carrusel-imagenes">
+            <img id="carousel1Image" alt="Servicio 2">
+        </div>
+        <button class="next" onclick="nextImage(1)">&#10095;</button>
+        <div class="over-txt">
+            <span>Actividades Infantiles</span>
+            <h4>CUMPLEAÑOS INFANTILES</h4>
+            <a href="#cumpleaños">Leer más</a>
+        </div>
+    </div>
+
+    <!-- Carrusel 3 -->
+    <div class="carrusel service-one">
+        <button class="prev" onclick="previousImage(2)">&#10094;</button>
+        <div class="carrusel-imagenes">
+            <img id="carousel2Image" alt="Servicio 3">
+        </div>
+        <button class="next" onclick="nextImage(2)">&#10095;</button>
+        <div class="over-txt">
+            <span>Actividades deportivas</span>
+            <h4>ALQUILER DE CANCHAS DE PADEL, DE LUNES A DOMINGO</h4>
+            <a href="#padel">Leer más</a>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+
+    <div class="Descripcion">
+        <h1 class="titulo1">DESCRIPCIÓN DE SERVICIOS</h1>
+        <div class="servicio-card" id="eventos">
+            <h1>Eventos de Reuniones/Cenas</h1>
+            <p>Incluye: Calefacción, Horno Pizzero, Parrilla, Heladera exhibidora, Frezzer, Baños individuales (con cambiador para bebés), Vajilla, Mantelería, incluye todo el predio con gazebos de diferentes medidas, living de exterior y puffs, mesa de pool (+16)</p>
+            <p>Precio en Efectivo y transferencia MP: $150.000</p>
+            <p>Precio con Débito, crédito HASTA 3 CUOTAS: $200.000</p>
+        </div>
+        <div class="servicio-card" id="cumpleaños">
+            <h1>Cumpleaños Infantiles</h1>
+            <p>Incluye: Calefacción, Horno Pizzero, Parrilla, Heladera exhibidora, Frezzer, Baños individuales (con cambiador para bebés), Vajilla PLÁSTICA, Mantelería, incluye todo el predio con gazebos de diferentes medidas, living de exterior y puffs, palett de decoración, inflables de diferentes tipos (para menores de 8 años), inflables gigantes para (+10 años) con previa reserva, juegos interactivos, minivoley, fútboltenis, metegol, mesa de pool (+16), tejo de aire, plaza blanda</p>
+            <p>Precio en Efectivo y transferencia MP: $200.000</p>
+            <p>Precio con Débito, crédito HASTA 3 CUOTAS: $250.000</p>
+        </div>
+        <div class="servicio-card" id="padel">
+            <h1>Canchas de Padel</h1>
+            <p>Cancha de padel privada, vení a disfrutar con tus amigos con la mayor privacidad y tranquilidad, con alquiler de paletas y pelotas, con ventas de bebidas, snacks, comida como pizzas y empanadas. Disponible de LUNES a DOMINGO de 10:00hs a 00:00hs.</p>
+            <p>Cancha de día hasta las 19hs: $8.000 x 1hs</p>
+            <p>Cancha de noches a partir de las 19hs: $10.000 x 1hs</p>
+        </div>
+    </div>
+    
+<footer class="pieDePagina">
+    <div class="pieDePagina-contenido">
+        <p>&copy; LaEsquinaMultiespacio. Todos los derechos reservados.</p>
+        <p class="fuente"><a href="https://linktr.ee/LaEsquinaMULTIESPACIO">Redes</a> | <a href="contacto.html">Contacto</a></p>
+    </div>
+</footer>
+
+
+</body>
+</html>

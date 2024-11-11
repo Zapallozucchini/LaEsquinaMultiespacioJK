@@ -1,0 +1,231 @@
+/* Encabezado */
+:root {
+    --main-color: #00f521;
+    --black: #13131a;
+    --bg: #191919;
+    --white: #fff;
+}
+
+header {
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 0 0 20px rgba(255, 236, 236, 0.5);
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+}
+
+.header .logo {
+    width: 60px;
+    height: 60px;
+}
+
+.header .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.header .navbar .menu-item a {
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+    color: var(--white);
+    text-transform: uppercase;
+    position: relative;
+    padding: 1.1rem 0;
+}
+
+.header .navbar .menu-item a:hover {
+    color: var(--main-color);
+}
+
+/* Fin Encabezado */
+body {
+    background-color: #181717;
+    margin: 0;
+    padding-top: 70px; /* Asegura que el contenido no quede detrás del encabezado fijo */
+}
+
+.titulo {
+    color: #ffffff;
+}
+
+input.error {
+    border-color: var(--main-color);
+}
+
+.error-message {
+    color: var(--main-color);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.success-message {
+    color: green;
+}
+
+form {
+    background-color: #000000;
+    padding: 20px;
+    border: 5px solid var(--main-color);
+    border-radius: 15px;
+    max-width: 400px;
+    margin: 60px auto; /* Añadido margen superior para espaciar el formulario del contenido anterior */
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 20px rgba(255, 236, 236, 0.5);
+    
+}
+
+label {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+    color: #ffffff;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 2px solid #ffffff;
+    box-sizing: border-box;
+    background: none;
+    border-radius: 10px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border: 2px solid var(--main-color);
+    outline: none;
+    box-shadow: none;
+}
+
+button {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    border: none; /* Cambiado para eliminar el borde negro */
+    border-radius: 15px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #00f52191;
+}
+
+#feedback {
+    margin-top: 30px;
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 450px;
+    margin: 30px auto;
+}
+
+#feedback h3 {
+    text-align: center;
+    color: white;
+}
+
+#feedbackDatos {
+    font-size: 16px;
+    color: var(--white);
+    text-align: left;
+    border: 2px solid white;
+    word-wrap: break-word;
+}
+
+select {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+select option {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+textarea {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 150px; /* Ajusta la altura */
+    padding: 10px; /* Espacio interior para el texto */
+    border: 2px solid var(--main-color); /* Borde verde brillante */
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    border-radius: 10px; /* Bordes suavemente redondeados */
+    box-sizing: border-box; /* Para que padding no afecte el tamaño del contenedor */
+    resize: none; /* Evita que el usuario cambie el tamaño manualmente */
+    font-size: 16px; /* Tamaño del texto cómodo */
+}
+
+textarea:focus {
+    border-color: var(--main-color);
+    outline: none;
+}
+
+/*PIE DE PAGINA*/
+.pieDePagina {
+    background-color: #333; /* Color de fondo oscuro */
+    color: #fff;            /* Texto en blanco */
+    padding: 20px;          /* Espaciado interno */
+    text-align: center;     /* Centrar texto */
+    width: 100%;            /* Ocupar todo el ancho */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    position: relative;     /* Posición relativa para estar al final del contenido */
+}
+
+.pieDePagina-contenido a {
+    color: #00aced;         /* Color de los enlaces */
+    text-decoration: none;  /* Sin subrayado */
+    margin: 0 10px;         /* Espacio entre los enlaces */
+}
+
+.pieDePagina-contenido a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+}
+
+.letras {
+    color: #ffffff;
+
+}
+.icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.icons a {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.icons a:hover {
+    text-decoration: underline;
+}
